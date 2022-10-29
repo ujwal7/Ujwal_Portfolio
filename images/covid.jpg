@@ -1,0 +1,233 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>COVID-19_Data_Visualization | Kaggle</title>
+  <meta charset="utf-8" />
+    <meta name="robots" content="index, follow" />
+  <meta name="description" content="Explore and run machine learning code with Kaggle Notebooks | Using data from COVID-19 Dataset" />
+  <meta name="turbolinks-cache-control" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#008ABC" />
+  <script nonce="&#x2B;YQrMkv7f1I2TAOfIvhNPA==" type="text/javascript">
+    window["pageRequestStartTime"] = 1667005858893;
+    window["pageRequestEndTime"] = 1667005859068;
+    window["initialPageLoadStartTime"] = new Date().getTime();
+  </script>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous" /><link rel="preconnect" href="https://stats.g.doubleclick.net" /><link rel="preconnect" href="https://storage.googleapis.com" /><link rel="preconnect" href="https://apis.google.com" />
+  <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="manifest" href="/static/json/manifest.json" crossorigin="use-credentials">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons"
+    rel="stylesheet" media="print" id="async-google-font-1" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" media="print" id="async-google-font-2" />
+  <script nonce="&#x2B;YQrMkv7f1I2TAOfIvhNPA==" type="text/javascript">
+    const styleSheetIds = ["async-google-font-1", "async-google-font-2"];
+    styleSheetIds.forEach(function (id) {
+      document.getElementById(id).addEventListener("load", function() {
+        this.media = "all";
+      });
+    });
+  </script>
+
+    <link rel="canonical" href="/code/ujwalkumar07/covid-19-data-visualization" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/vendor.css?v=85d731a494547753f1bf" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/app.css?v=05fd4a14199e46a5dc97" />
+  
+    
+ 
+      <script nonce="&#x2B;YQrMkv7f1I2TAOfIvhNPA==">
+        try{(function(a,s,y,n,c,h,i,d,e){d=s.createElement("style");
+        d.appendChild(s.createTextNode(""));s.head.appendChild(d);d=d.sheet;
+        y=y.map(x => d.insertRule(x + "{ opacity: 0 !important }"));
+        h.start=1*new Date;h.end=i=function(){y.forEach(x => x<d.cssRules.length ? d.deleteRule(x) : {})};
+        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document,['.site-header-react__nav'],'dataLayer',2000,{'GTM-52LNT9S':true});}catch(ex){}
+    </script>
+    <script nonce="&#x2B;YQrMkv7f1I2TAOfIvhNPA==">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-12629138-1', {
+            'optimize_id': 'GTM-52LNT9S',
+            'displayFeaturesTask': null,
+            'send_page_view': false,
+            'content_group1': 'Notebooks'
+        });
+    </script>
+    <script nonce="&#x2B;YQrMkv7f1I2TAOfIvhNPA==" async src="https://www.googletagmanager.com/gtag/js?id=UA-12629138-1"></script>
+
+  
+    
+    <meta name="og:url" content="https://kaggle.com/code/ujwalkumar07/covid-19-data-visualization" />
+    <meta property="og:title" content="COVID-19_Data_Visualization" />
+    <meta property="og:description" content="Explore and run machine learning code with Kaggle Notebooks | Using data from COVID-19 Dataset" />
+    <meta property="og:type" content="website" />
+    <meta name="og:image" content="https://storage.googleapis.com/kaggle-avatars/thumbnails/3598876-kg.jpg" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaggledatasets" />
+
+
+  <meta name="twitter:site" content="@Kaggle" /> 
+  
+    
+    <script nonce="+YQrMkv7f1I2TAOfIvhNPA==" type="application/ld+json">{"@context":"http://schema.org/","@type":"Article","author":{"@type":"Person","name":"ujwalkumar07","sameAs":"/ujwalkumar07"},"headline":"COVID-19_Data_Visualization","url":"https://www.kaggle.com/code/ujwalkumar07/covid-19-data-visualization","dateModified":"2020-12-14T13:01:26.0766667Z","datePublished":"2020-12-14T13:01:26.0766667Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.kaggle.com/code/ujwalkumar07/covid-19-data-visualization"},"publisher":{"@type":"Organization","name":"Kaggle","sameAs":"https://www.kaggle.com","logo":{"type":"ImageObject","url":"https://www.kaggle.com/static/images/site-logo.png"}},"image":["https://storage.googleapis.com/kaggle-avatars/thumbnails/3598876-kg.jpg"]}</script>
+
+
+  
+    
+        <link rel="alternate" type="application/json+oembed"
+          href="https://www.kaggle.com/oembed/kernel?url=https%3A%2F%2Fwww.kaggle.com%2Fcode%2Fujwalkumar07%2Fcovid-19-data-visualization%3FscriptVersionId%3D49307885"
+          title="COVID-19_Data_Visualization" />
+
+
+  
+    
+    
+<script nonce="&#x2B;YQrMkv7f1I2TAOfIvhNPA==" type="text/javascript">
+    var Kaggle = window.Kaggle || {};
+
+    Kaggle.Current = {
+        antiForgeryToken: 'CfDJ8NPjaA7PR8ZKrH3DyCuHZZjQx3k7iAAA9je09gVPiyC6WpWxsP02EHYh5I6vA2d4mZqvOqpjIMA6pYahOdFFYaHxd1lUCtN_zf-vtTYdiTKX-A',
+        isAnonymous: true,
+        analyticsToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjcwMDY3NTksIlVzZXJJZCI6MH0.kS1OWwa_DUbf0rNPMiz5XnyNaAJ7g2f_8bovwR2RclI',
+        analyticsTokenExpiry: 15,
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+        Kaggle.Current.log = function(){};
+        Kaggle.Current.warn = function(){};
+
+    const decodeUserProperty = function (escapedUserProperty) {
+        escapedUserProperty = escapedUserProperty || "";
+        try {
+            const textVersion = new DOMParser().parseFromString(escapedUserProperty, "text/html").documentElement.textContent;
+            if (textVersion) {
+                return textVersion;
+            }
+        } catch(ex) {}
+        return escapedUserProperty;
+    }
+    Kaggle.Current.userDisplayName = decodeUserProperty(Kaggle.Current.userDisplayNameEscaped);
+    Kaggle.Current.userEmail = decodeUserProperty(Kaggle.Current.userEmailEscaped); 
+</script>
+
+    
+
+<script nonce="&#x2B;YQrMkv7f1I2TAOfIvhNPA==" type="text/javascript">
+    var Kaggle = window.Kaggle || {};
+    Kaggle.PageMessages = [];
+</script>
+
+
+
+    <script nonce="&#x2B;YQrMkv7f1I2TAOfIvhNPA==">window['useKaggleAnalytics'] = true;</script>
+
+  <script id="gapi-target" nonce="&#x2B;YQrMkv7f1I2TAOfIvhNPA==" src="https://apis.google.com/js/api.js" defer
+    async></script>
+  <script nonce="+YQrMkv7f1I2TAOfIvhNPA==" src="/static/assets/runtime.js?v=9d51e0843954c9c53953" data-turbolinks-track="reload"></script>
+  <script nonce="+YQrMkv7f1I2TAOfIvhNPA==" src="/static/assets/vendor.js?v=7357fda0a7a62b62514d" data-turbolinks-track="reload"></script>
+  <script nonce="+YQrMkv7f1I2TAOfIvhNPA==" src="/static/assets/app.js?v=904c14b02c989779313b" data-turbolinks-track="reload"></script>
+    <script nonce="&#x2B;YQrMkv7f1I2TAOfIvhNPA==" type="text/javascript">
+      window.kaggleStackdriverConfig = {
+        key: 'AIzaSyA4eNqUdRRskJsCZWVz-qL655Xa5JEMreE',
+        projectId: 'kaggle-161607',
+        service: 'web-fe',
+        version: 'ci',
+        userId: '0'
+      }
+    </script>
+</head>
+
+<body data-turbolinks="false">
+  <main>
+    
+
+
+
+
+
+
+<div id="site-container"></div>
+<div data-component-name="NavigationContainer" style="display: flex; flex-direction: column; flex: 1 0 auto;"></div><script class="kaggle-component" nonce="+YQrMkv7f1I2TAOfIvhNPA==">var Kaggle=window.Kaggle||{};Kaggle.State=Kaggle.State||[];Kaggle.State.push({"navigationType":"BOTH_NAV"});performance && performance.mark && performance.mark("NavigationContainer.componentCouldBootstrap");</script>
+<div id="site-body" class="hide">
+    
+
+
+
+
+<div data-component-name="KernelViewerMaterialContainer" style="display: flex; flex-direction: column; flex: 1 0 auto;"></div><script class="kaggle-component" nonce="+YQrMkv7f1I2TAOfIvhNPA==">var Kaggle=window.Kaggle||{};Kaggle.State=Kaggle.State||[];Kaggle.State.push({"kernel":{"id":13505744,"title":"COVID-19_Data_Visualization","currentRunId":49307885,"mostRecentRunId":49307885,"url":"/code/ujwalkumar07/covid-19-data-visualization","tags":[{"name":"data visualization","slug":"data-visualization","url":"/tags/data-visualization"},{"name":"exploratory data analysis","slug":"eda","url":"/tags/eda"},{"name":"text data","slug":"text-data","url":"/tags/text-data"},{"name":"data cleaning","slug":"data-cleaning","url":"/tags/data-cleaning"},{"name":"categorical data","slug":"categorical-data","url":"/tags/categorical-data"}],"upvoteCount":1,"viewCount":128,"forkCount":1,"author":{"id":3598876,"displayName":"Ujwal Kumar","userName":"ujwalkumar07","thumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/3598876-kg.jpg","profileUrl":"/ujwalkumar07"},"updatedTime":"2020-12-14T13:01:26.076666700Z","selfLink":"/kernels/13505744","dockerImagePinningType":"DOCKER_IMAGE_PINNING_TYPE_ORIGINAL","originalDockerImageId":30042,"topicId":203265,"slug":"covid-19-data-visualization","canToggleVisibility":true},"kernelRun":{"id":49307885,"kernelId":13505744,"status":"COMPLETE","kernelVersionType":"BATCH","sourceType":"EDITOR_TYPE_NOTEBOOK","language":"LANGUAGE_PYTHON","title":"COVID-19_Data_Visualization","dateCreated":"2020-12-14T13:01:23.683Z","dateEvaluated":"2020-12-14T13:01:26.077Z","workerUptimeSeconds":136,"workerIpAddress":"172.21.64.216  ","workerIpAddressExternal":"35.192.202.154 ","scriptLanguageId":9,"scriptLanguageName":"IPython Notebook HTML","renderedOutputUrl":"https://www.kaggleusercontent.com/kf/49307885/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..RHHH92sZTaM-DcJmhbUL7w.slNxXTu4Q9DN9ay8bvJng3XloddV7SQspX58_lH9ichFWTdXq9EOopXI4MsjMnjq1LVN0hyX6hYiN_VkMtkoJ7YpXWequlj-35s0Bd-PkIFo3ozFtZVn5G8Bntrfx1VKAZJ3n49dLJQ2IUJ9j-wjVzoqvoAFPdILBcIATiQ3S9x_XJFWUoJYzN3FQYt_tPdXhDdSstmZxUJjpxDAN3uCr6d6hk8A8uFzoutnZpFTgThJATmzy5EXghDJTHdY4a-T4nIZZoVpwK1IfoGyyz-V3flrv5-CuYFzJW730s0R2PJ_ekCUFwSwRALDODHYEFzBlcMBJST2kdF1vxH9v15aiX1O6CZQ5I2RwUgn0DTwV0SDuqsK5S_z6kQEF0SoQiHn8-yzZnhjhDqCGrjaOlgzPqE1xd_nepkNY5ca87V3gRUR-uzsuy_D7cC0mlaWjaMxAoHvvlPSi0X1W408-LTFxExWcU0HbZ_5O--0DcsBGgHeLkPD1DxjJ4KZoTqxd30eyYbE4j8C0HPp2Hu8G-Cj3d-3BRWZW_YUl4BJkQNU0ue3Nhr_Kt9ac8hCVprnX4BYTKZcIUFgIBYBRVs5zlRMYOjc8NUIIhzwPxrNd9M-ABGEmNdZoWPpSMV9PiyE9A030fJJw2BFd3SRBk6JBCpG2vZsaVtoXWPTKkCywGPiNmQ.pqFpGMegWEo4lUKPZNY9ZA/__results__.html?sharingControls=true","isolatorResults":"\u003Cresults\u003E\u003Cexit_code\u003E0\u003C/exit_code\u003E\u003Cinvalid_path_errors\u003EFalse\u003C/invalid_path_errors\u003E\u003Cout_of_memory\u003EFalse\u003C/out_of_memory\u003E\u003Crun_time_seconds\u003E146.230049\u003C/run_time_seconds\u003E\u003Csucceeded\u003ETrue\u003C/succeeded\u003E\u003Ctimeout_exceeded\u003EFalse\u003C/timeout_exceeded\u003E\u003Cused_all_space\u003EFalse\u003C/used_all_space\u003E\u003Cwas_killed\u003EFalse\u003C/was_killed\u003E\u003Cdocker_image_name\u003Egcr.io/kaggle-images/python@sha256:993897c5431c85530f48a9fe6546d01decc42d91ab05f4d9eb31ab0da835fe90\u003C/docker_image_name\u003E\u003Cdocker_image_digest\u003E993897c5431c85530f48a9fe6546d01decc42d91ab05f4d9eb31ab0da835fe90\u003C/docker_image_digest\u003E\u003Cdocker_image_id\u003Esha256:d68071da6abc7fe0aec22c468ceb2e2306eeea51f8e123857d01814773bc4242\u003C/docker_image_id\u003E\u003Coutput_size_bytes\u003E0\u003C/output_size_bytes\u003E\u003C/results\u003E","runInfo":{"dockerfileUrl":"https://github.com/Kaggle/docker-python/blob/main/Dockerfile.tmpl","dockerHubUrl":"https://gcr.io/kaggle-images/python@sha256:993897c5431c85530f48a9fe6546d01decc42d91ab05f4d9eb31ab0da835fe90","dockerImageDigest":"993897c5431c85530f48a9fe6546d01decc42d91ab05f4d9eb31ab0da835fe90","dockerImageId":"sha256:d68071da6abc7fe0aec22c468ceb2e2306eeea51f8e123857d01814773bc4242","dockerImageName":"gcr.io/kaggle-images/python@sha256:993897c5431c85530f48a9fe6546d01decc42d91ab05f4d9eb31ab0da835fe90","outputSizeBytes":0,"runTimeSeconds":146.230049,"succeeded":true},"dockerImageVersionId":30042,"dataSources":[{"sourceType":"DATA_SOURCE_TYPE_DATASET_VERSION","sourceId":1742875,"datasetId":1034624,"mountSlug":"covid19-dataset"}],"useNewKernelsBackend":true,"isInternetEnabled":true,"userPlan":"USER_PLAN_FREE"},"author":{"id":3598876,"displayName":"Ujwal Kumar","userName":"ujwalkumar07","thumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/3598876-kg.jpg","profileUrl":"/ujwalkumar07"},"baseUrl":"/code/ujwalkumar07/covid-19-data-visualization","collaborators":{"owner":{"userId":3598876,"profileUrl":"/ujwalkumar07","thumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/3598876-kg.jpg","name":"Ujwal Kumar","slug":"ujwalkumar07","type":"OWNER"}},"initialTab":"","log":"[{\u0022stream_name\u0022:\u0022stdout\u0022,\u0022time\u0022:8.415940894,\u0022data\u0022:\u0022/kaggle/input/covid19-dataset/StatewiseTestingDetails.csv\\n\u0022}\n,{\u0022stream_name\u0022:\u0022stdout\u0022,\u0022time\u0022:8.416006888,\u0022data\u0022:\u0022/kaggle/input/covid19-dataset/covid_19_india.csv\\n\u0022}\n,{\u0022stream_name\u0022:\u0022stderr\u0022,\u0022time\u0022:15.217075733,\u0022data\u0022:\u0022/opt/conda/lib/python3.7/site-packages/ipykernel_launcher.py:2: SettingWithCopyWarning:\\n\u0022}\n,{\u0022stream_name\u0022:\u0022stderr\u0022,\u0022time\u0022:15.217235997,\u0022data\u0022:\u0022\\n\u0022}\n,{\u0022stream_name\u0022:\u0022stderr\u0022,\u0022time\u0022:15.217254677,\u0022data\u0022:\u0022\\n\u0022}\n,{\u0022stream_name\u0022:\u0022stderr\u0022,\u0022time\u0022:15.21726084,\u0022data\u0022:\u0022A value is trying to be set on a copy of a slice from a DataFrame.\\n\u0022}\n,{\u0022stream_name\u0022:\u0022stderr\u0022,\u0022time\u0022:15.217267054,\u0022data\u0022:\u0022Try using .loc[row_indexer,col_indexer] = value instead\\n\u0022}\n,{\u0022stream_name\u0022:\u0022stderr\u0022,\u0022time\u0022:15.217273397,\u0022data\u0022:\u0022\\n\u0022}\n,{\u0022stream_name\u0022:\u0022stderr\u0022,\u0022time\u0022:15.217278872,\u0022data\u0022:\u0022See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy\\n\u0022}\n,{\u0022stream_name\u0022:\u0022stderr\u0022,\u0022time\u0022:15.217296218,\u0022data\u0022:\u0022\\n\u0022}\n,{\u0022stream_name\u0022:\u0022stderr\u0022,\u0022time\u0022:144.36927906,\u0022data\u0022:\u0022[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\\n\u0022}\n,{\u0022stream_name\u0022:\u0022stderr\u0022,\u0022time\u0022:144.691512449,\u0022data\u0022:\u0022[NbConvertApp] Writing 824216 bytes to __notebook__.ipynb\\n\u0022}\n,{\u0022stream_name\u0022:\u0022stderr\u0022,\u0022time\u0022:145.320709,\u0022data\u0022:\u0022[NbConvertApp] Converting notebook __notebook__.ipynb to html\\n\u0022}\n,{\u0022stream_name\u0022:\u0022stderr\u0022,\u0022time\u0022:146.09847694,\u0022data\u0022:\u0022[NbConvertApp] Support files will be in __results___files/\\n\u0022}\n,{\u0022stream_name\u0022:\u0022stderr\u0022,\u0022time\u0022:146.098532867,\u0022data\u0022:\u0022[NbConvertApp] Making directory __results___files\\n\u0022}\n,{\u0022stream_name\u0022:\u0022stderr\u0022,\u0022time\u0022:146.098868285,\u0022data\u0022:\u0022[NbConvertApp] Making directory __results___files\\n\u0022}\n,{\u0022stream_name\u0022:\u0022stderr\u0022,\u0022time\u0022:146.099135528,\u0022data\u0022:\u0022[NbConvertApp] Making directory __results___files\\n\u0022}\n,{\u0022stream_name\u0022:\u0022stderr\u0022,\u0022time\u0022:146.099378834,\u0022data\u0022:\u0022[NbConvertApp] Making directory __results___files\\n\u0022}\n,{\u0022stream_name\u0022:\u0022stderr\u0022,\u0022time\u0022:146.099919021,\u0022data\u0022:\u0022[NbConvertApp] Making directory __results___files\\n\u0022}\n,{\u0022stream_name\u0022:\u0022stderr\u0022,\u0022time\u0022:146.100109565,\u0022data\u0022:\u0022[NbConvertApp] Making directory __results___files\\n\u0022}\n,{\u0022stream_name\u0022:\u0022stderr\u0022,\u0022time\u0022:146.100357109,\u0022data\u0022:\u0022[NbConvertApp] Writing 454953 bytes to __results__.html\\n\u0022}\n]","ouputFilesOwnerInfo":{"kernel":{"kernelId":13505744,"kernelVersionId":49307885,"scope":"ujwalkumar07/covid-19-data-visualization"}},"dataSources":[{"sourceType":"DATA_SOURCE_TYPE_DATASET_VERSION","sourceId":1742875,"datasetId":1034624,"mountSlug":"covid19-dataset"}],"renderableDataSources":[{"reference":{"sourceType":"DATA_SOURCE_TYPE_DATASET_VERSION","sourceId":1742875,"mountSlug":"covid19-dataset"},"name":"COVID-19 Dataset","dataSourceUrl":"/datasets/ujwalkumar07/covid19-dataset","thumbnailUrl":"https://storage.googleapis.com/kaggle-datasets-images/new-version-temp-images/default-backgrounds-87.png-3598876/dataset-thumbnail.png"}],"versions":[{"id":49307885,"isNotebook":true,"languageName":"Python","lastRunTime":"2020-12-14T13:01:23.683Z","linesDeletedFromPrevious":1,"linesInsertedFromPrevious":1,"runInfo":{"dockerfileUrl":"https://github.com/Kaggle/docker-python@sha256:993897c5431c85530f48a9fe6546d01decc42d91ab05f4d9eb31ab0da835fe90/blob/master/Dockerfile","dockerHubUrl":"https://registry.hub.docker.com/u/kaggle/python@sha256:993897c5431c85530f48a9fe6546d01decc42d91ab05f4d9eb31ab0da835fe90/","dockerImageId":"sha256:d68071da6abc7fe0aec22c468ceb2e2306eeea51f8e123857d01814773bc4242","dockerImageName":"gcr.io/kaggle-images/python@sha256:993897c5431c85530f48a9fe6546d01decc42d91ab05f4d9eb31ab0da835fe90","isValidStatus":true,"runTimeSeconds":146.230049,"succeeded":true,"usedAllSpace":false},"status":"COMPLETE","title":"COVID-19_Data_Visualization","url":"/ujwalkumar07/covid-19-data-visualization?scriptVersionId=49307885","versionNumber":2,"hasVersionNumber":true,"versionType":"BATCH","userPlan":"USER_PLAN_FREE"},{"id":49307003,"isNotebook":true,"languageName":"Python","lastRunTime":"2020-12-14T12:51:08.917Z","linesInsertedFromPrevious":259,"runInfo":{"dockerfileUrl":"https://github.com/Kaggle/docker-python@sha256:993897c5431c85530f48a9fe6546d01decc42d91ab05f4d9eb31ab0da835fe90/blob/master/Dockerfile","dockerHubUrl":"https://registry.hub.docker.com/u/kaggle/python@sha256:993897c5431c85530f48a9fe6546d01decc42d91ab05f4d9eb31ab0da835fe90/","dockerImageId":"sha256:d68071da6abc7fe0aec22c468ceb2e2306eeea51f8e123857d01814773bc4242","dockerImageName":"gcr.io/kaggle-images/python@sha256:993897c5431c85530f48a9fe6546d01decc42d91ab05f4d9eb31ab0da835fe90","isValidStatus":true,"runTimeSeconds":176.4730911,"succeeded":true,"usedAllSpace":false},"status":"COMPLETE","title":"COVID-19_Data_Visualization","url":"/ujwalkumar07/covid-19-data-visualization?scriptVersionId=49307003","versionNumber":1,"hasVersionNumber":true,"versionType":"BATCH","userPlan":"USER_PLAN_FREE"}],"downloadAllFilesUrl":"/code/svzip/49307885","menuLinks":[{"href":"/code/ujwalkumar07/covid-19-data-visualization/code","tab":"code","text":"Code","title":"Code"},{"href":"/code/ujwalkumar07/covid-19-data-visualization/notebook","tab":"notebook","text":"Notebook","title":"Notebook"},{"href":"/code/ujwalkumar07/covid-19-data-visualization/execution","showOnMobile":false,"tab":"execution","text":"Execution Info","title":"Execution Info"},{"href":"/code/ujwalkumar07/covid-19-data-visualization/log","showOnMobile":false,"tab":"log","text":"Log","title":"Log"},{"count":0,"href":"/code/ujwalkumar07/covid-19-data-visualization/data","tab":"data","text":"Input","title":"Input"},{"count":2,"href":"/code/ujwalkumar07/covid-19-data-visualization/comments","showZeroCountExplicitly":true,"tab":"comments","text":"Comments","title":"Comments"}],"callToAction":{"href":"/code/fork-version/49307885","reportEventCategory":"kernels","reportEventType":"anonymousKernelForkCreation","text":"Fork Notebook","title":"Fork Notebook"},"voteButton":{"totalVotes":1,"medalVotes":0,"canUpvote":true,"voters":[{"id":6380914,"displayName":"Nitin Chavan","userName":"nitinchavan1769","thumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","profileUrl":"/nitinchavan1769"}],"showVoters":true,"alwaysShowVoters":true,"kernelId":13505744},"showSharingControls":true,"moderationStatus":"PRIVATED_MODERATION_STATUS_NO_ABUSE","@wf": "Kernels.GetKernelViewModelResponseWireFormat3"});performance && performance.mark && performance.mark("KernelViewerMaterialContainer.componentCouldBootstrap");</script>
+
+<form action="/code/ujwalkumar07/covid-19-data-visualization" id="__AjaxAntiForgeryForm" method="post"><input name="X-XSRF-TOKEN" type="hidden" value="CfDJ8NPjaA7PR8ZKrH3DyCuHZZjQx3k7iAAA9je09gVPiyC6WpWxsP02EHYh5I6vA2d4mZqvOqpjIMA6pYahOdFFYaHxd1lUCtN_zf-vtTYdiTKX-A" /></form>
+<script nonce="&#x2B;YQrMkv7f1I2TAOfIvhNPA==" type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+    preferredFont: "TeX",
+    availableFonts: ["STIX", "TeX"],
+    linebreaks: {
+    automatic: true
+    },
+    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+    inlineMath: [["\\(", "\\)"], ["\\\\(", "\\\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|dno"
+    },
+    TeX: {
+    noUndefined: {
+    attributes: {
+    mathcolor: "red",
+    mathbackground: "#FFEEEE",
+    mathsize: "90%"
+    }
+    }
+    },
+    Macros: {
+    href: "{}"
+    },
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    extensions: ["Safe.js"],
+    });
+</script>
+<script type="text/javascript" nonce="&#x2B;YQrMkv7f1I2TAOfIvhNPA==">
+  window.addEventListener("DOMContentLoaded", () => {
+    const head = document.getElementsByTagName("head")[0];
+    const useProdHosts = ["www.kaggle.com", "admin.kaggle.com"];
+    const subdomain = useProdHosts.includes(window.location.hostname) ? "www" : "staging";
+
+    const lib = document.createElement("script");
+    lib.type = "text/javascript";
+    lib.src = `https://${subdomain}.kaggleusercontent.com/static/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML`;
+    head.appendChild(lib);
+  });
+</script>
+
+
+</div>
+
+
+
+
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Ujwal Kumar</title>
+    <link>https://ujwal7.github.io/Ujwal_Portfolio/post/</link>
+    <description>Recent content in Projects on Ujwal Kumar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://ujwal7.github.io/Ujwal_Portfolio/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>United States House Rent Prediction</title>
+      <link>https://ujwal7.github.io/Ujwal_Portfolio/post/chapter-6/</link>
+      <pubDate>Thu, 27 Oct 2022 11:25:05 -0400</pubDate>
+      
+      <guid>https://ujwal7.github.io/Ujwal_Portfolio/post/chapter-6/</guid>
+      <description>As international or domestic students, many students arrive from various locations and countries, making it difficult for them to estimate the rent they must pay. Moreover, each student has unique requirements and options. As a result, their calculations for budgeting and spending could be challenging. Since housing is one of the most important basic requirements, we decided to do an analysis that will be useful for the current students as well as future cohorts in determining the proper rent price that is most suitable for them in order to attend the university.</description>
+    </item>
+    
+    <item>
+      <title>Flight Price Prediction</title>
+      <link>https://ujwal7.github.io/Ujwal_Portfolio/post/chapter-5/</link>
+      <pubDate>Wed, 15 Jun 2022 11:15:58 -0400</pubDate>
+      
+      <guid>https://ujwal7.github.io/Ujwal_Portfolio/post/chapter-5/</guid>
+      <description>Optimal timing for airline ticket purchasing from the consumer’s perspective is challenging principally because buyers have insufficient information for reasoning about future price movements. In this project we majorly targeted to uncover underlying trends of flight prices in India using historical data and also to suggest the approximate price of a flight ticket.
+The project implements the validations or contradictions towards myths regarding the airline industry, a comparison study among various models in predicting the optimal time to buy the flight ticket and the amount that can be saved if done so.</description>
+    </item>
+    
+    <item>
+      <title>New York Police Department Case Study</title>
+      <link>https://ujwal7.github.io/Ujwal_Portfolio/post/chapter-4/</link>
+      <pubDate>Sun, 15 Aug 2021 11:14:48 -0400</pubDate>
+      
+      <guid>https://ujwal7.github.io/Ujwal_Portfolio/post/chapter-4/</guid>
+      <description>Project Overview: The dataset consists the list of every shooting incident that occurred in NYC going back to 2006 through the end of 2019. Each record represents a shooting incident in NYC and includes information about the event, the location and time of occurrence. In addition, information related to suspect and victim demographics is also included. This data is manually extracted every quarter and reviewed by the Office of Management Analysis and Planning before being posted on the NYPD website.</description>
+    </item>
+    
+    <item>
+      <title>COVID-19: Data Visualization</title>
+      <link>https://ujwal7.github.io/Ujwal_Portfolio/post/chapter-2/</link>
+      <pubDate>Fri, 11 Dec 2020 11:13:32 -0400</pubDate>
+      
+      <guid>https://ujwal7.github.io/Ujwal_Portfolio/post/chapter-2/</guid>
+      <description>In this project, I visualized the COVID-19 dataset published by the Indian government to analyze which states are the most affected and how the testing process is progressing in Indian states. This project assisted me in developing my knowledge of Python data visualization libraries. Below is one of the graph which I&amp;rsquo;ve created in the notebook:   To know more about Data Cleaning and Data Visualization click on the below link</description>
+    </item>
+    
+    <item>
+      <title>Machine Learning Projects</title>
+      <link>https://ujwal7.github.io/Ujwal_Portfolio/post/chapter-3/</link>
+      <pubDate>Tue, 11 Aug 2020 11:13:32 -0400</pubDate>
+      
+      <guid>https://ujwal7.github.io/Ujwal_Portfolio/post/chapter-3/</guid>
+      <description>In this project, I attempted to focus on each supervised learning algorithm separately. I&amp;rsquo;ve used a variety of models and datasets, ranging from Logistic Regression to Random Forest. This project helped me improve my ability to handle data, visualize data, and draw conclusions from it.
+Below is one visualization graph on Lending Club data set, in this instance I have used Decision Trees and Randome Forest for prediction.   To know more about each and every model used.</description>
+    </item>
+    
+  </channel>
+</rss>
